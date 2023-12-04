@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Text Editor</title>
+</head>
+<body>
+  <div id="editor-container">
+    <div id="toolbar">
+      <label>
+        Font
+        <br>
+        <select id="fontSelect" onchange="changeFont()">
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Impact">Impact</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Palatino Linotype">Palatino Linotype</option>
+          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+          <option value="Garamond">Garamond</option>
+          <option value="Book Antiqua">Book Antiqua</option>
+          <option value="Copperplate">Copperplate</option>
+          <option value="Courier">Courier</option>
+        </select>
+      </label>
+      <button onclick="undo()" style="margin-left: 700px">&#8630;</button>
+      <button onclick="redo()">&#8631;</button>
+      <label>
+        <br>
+        
+        Size
+        <select id="sizeSelect" onchange="changeSize()">
+          <option value="12">12px</option>
+          <option value="14">14px</option>
+          <option value="16">16px</option>
+          <option value="18">18px</option>
+          <option value="20">20px</option>
+          <option value="22">22px</option>
+          <option value="24">24px</option>
+          <option value="26">26px</option>
+          <option value="28">28px</option>
+          <option value="30">30px</option>
+          <option value="32">32px</option>
+          <option value="36">36px</option>
+          <option value="40">40px</option>
+          <option value="48">48px</option>
+          <option value="56">56px</option>
+        </select>
+      </label>
+      
+      <label>
+        Color
+        <input type="color" id="colorInput" onchange="changeColor()" >
+
+      </label>
+      
+    </div>
+    <textarea id="text-input" placeholder="Type your text here..." oninput="updateEditor()"></textarea>
+    <div id="editor" contenteditable="true"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
